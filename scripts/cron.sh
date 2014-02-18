@@ -5,12 +5,14 @@ exec >> /var/log/flooddata 2>&1
 
 echo ::::::::::::::::
 date
+cd ${FLOODDATA:?}
 
 set -x
-time $FLOODDATA/scripts/pull.sh
-time $FLOODDATA/scripts/unzip.sh
-time $FLOODDATA/scripts/process.sh
-time $FLOODDATA/scripts/push.sh
+time scripts/pull.sh
+time scripts/unzip.sh
+time scripts/stations.sh
+time scripts/publish.sh
+time scripts/push.sh
 set +x
 
 date
