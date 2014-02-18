@@ -1,11 +1,19 @@
 #!/bin/bash
 
 #
-#  generate indexes, publish data
+#  generate static site in www
 #
-set -e -x
-mkdir -p $FLOODDATA/data
-cd $FLOODDATA/data
+set -e
 
-mkdir -p www
-gzip -c < ~/data/stations.tsv > ~/www/stations.tsv.gz
+cd ${FLOODDATA:?}
+
+mkdir -p data tmp www www/stations
+
+gzip -c < data/stations.tsv > tmp/stations.tsv.gz
+mv tmp/stations.tsv.gz www/
+
+#
+#  index
+#
+cd $FLOODDATA/www
+php ../templates/index.php > index.html

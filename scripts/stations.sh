@@ -17,7 +17,7 @@ find files/ENT_7001 -name \*.xml |
             mkdir -p $(dirname "$tsv")
             (
                 set -x
-                xsltproc scripts/stations.xsl $xml
+                xsltproc templates/stations.xsl $xml
             ) | grep -v 'Gate Position' > $tsv
         fi
     done
