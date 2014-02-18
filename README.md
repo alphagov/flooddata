@@ -1,6 +1,6 @@
-Demonstration feed of EA data for the 2014 floods to accompany:
+Demonstration feed of EA data for the 2014 floods.
 
-    https://www.gov.uk/government/publications/uk-floods-2014-data
+Documentation and other metadata including the location of gagues and shapefiles for alerts and warnings are available from https://www.gov.uk/government/publications/uk-floods-2014-data
 
 ## Roadmap
 
