@@ -1,14 +1,11 @@
 #!/bin/bash
 
 #
-#  turn data/stations.tsv into a latest and daily files
+#  generate indexes, publish data
 #
 set -e -x
 mkdir -p $FLOODDATA/data
 cd $FLOODDATA/data
 
-
-#
-# compress and publish to the www directory
-#
+mkdir -p www
 gzip -c < ~/data/stations.tsv > ~/www/stations.tsv.gz
