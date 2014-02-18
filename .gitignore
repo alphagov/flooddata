@@ -4,3 +4,17 @@ flooddata.env
 files
 tmp
 www
+
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.gnupg/
+.profile
+.rnd
+.s3cfg
+.selected_editor
+.ssh/
+.sudo_as_admin_successful
+.vim/
+.viminfo
