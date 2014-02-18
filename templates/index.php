@@ -16,7 +16,7 @@
         if ($handle = opendir($dir)) {
             while (false !== ($entry = readdir($handle))) {
                 if (!preg_match("/^\./", $entry)) {
-                    echo "    <li><a href=\"$entry\">$entry</a></li>\n";
+                    echo "    <li><a href=\"$dir/$entry\">$entry</a></li>\n";
                 }
             }
             closedir($handle);
