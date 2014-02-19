@@ -27,3 +27,9 @@ find cache/files/ENT_7001 -name \*.tsv |
     sort -n |
     uniq > data/stations.tsv
 
+#
+#  zip latest stations.tsv
+#  - for backwards compatibility with big file made for the hackday
+#
+gzip -c < data/stations.tsv > data/stations.tsv.gz
+

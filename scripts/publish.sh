@@ -12,18 +12,10 @@ mkdir -p data www tmp
 #
 #  copy files
 #
-rsync -a data/* www/
-rm www/stations.tsv
+rsync -av data/* www/
 
 #
-#  zip index
-#  - for backwards compatibility with big file made for the hackday
-#
-gzip -c < data/stations.tsv > tmp/stations.tsv.gz
-mv tmp/stations.tsv.gz www/
-
-#
-#  index
+#  generate index page
 #
 cd $FLOODDATA/www
 php ../templates/index.php > index.html
