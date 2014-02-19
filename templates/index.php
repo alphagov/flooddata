@@ -8,7 +8,7 @@
 <body>
 <div id="header">
   <h1>UK floods 2014 data feeds</h1>
-  <p>A set of data feeds to accompany the <a href="https://www.gov.uk/government/publications/uk-floods-2014-data">UK floods 2014 data</a> published by the Environment Agency on GOV.UK.</p>
+  <p>A set of data feeds to accompany the <a href="https://www.gov.uk/government/publications/uk-floods-2014-data">UK floods 2014 data</a> published by the <a href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a> on <a href="https://www.gov.uk">GOV.UK</a>.</p>
 </div>
 
 <?php
@@ -35,7 +35,7 @@
 
 <div id="3df">
   <h2>Three day forecast</h2>
-  <p>Three Day forecast, produced daily by county containing an image:</p>
+  <p>Three Day weather and flooding forecast, published daily:</p>
   <ul>
     <li><a href="3df.xml">3df.xml</a> — latest</li>
 <?php list_files('3df') ?>
