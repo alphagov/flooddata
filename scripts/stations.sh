@@ -6,7 +6,7 @@
 set -e
 
 cd ${FLOODDATA:?}
-mkdir -p cache data data/stations
+mkdir -p cache www www/stations
 export tmpfile=/tmp/stations.$$
 export header=/tmp/stations-header
 
@@ -41,7 +41,7 @@ find files/ENT_7001 -name \*.xml |
                     day=$1;
                     sub(/T.*$/,"",day);
                     gsub(/-/,"",day);
-                    file="data/stations/" day ".tsv";
+                    file="www/stations/" day ".tsv";
                     print >> file;
                     print file
                }'
@@ -67,13 +67,15 @@ find files/ENT_7001 -name \*.xml |
 #
 #  generate latest file
 #
-find cache/files/ENT_7001 -name \*.tsv |
+ls -1 www/stations/*.tsv |
+    tail -2 |
     xargs cat |
+    tail -2000 |
     sort -n |
-    uniq > data/stations.tsv
+    uniq > www/stations.tsv
 
 #
 #  zip latest stations.tsv
 #  - for backwards compatibility with big file made for the hackday
 #
-gzip -c < data/stations.tsv > data/stations.tsv.gz
+gzip -c < www/stations.tsv > www/stations.tsv.gz
