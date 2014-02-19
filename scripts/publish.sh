@@ -7,12 +7,7 @@ set -e
 
 cd ${FLOODDATA:?}
 
-mkdir -p data www tmp
-
-#
-#  copy files
-#
-rsync -av data/* www/
+mkdir -p www tmp
 
 #
 #  generate index page
