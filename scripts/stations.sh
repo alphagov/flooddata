@@ -67,10 +67,10 @@ find files/ENT_7001 -name \*.xml |
 #
 #  generate short feed of latest results
 #
-ls -tr www/stations |
+ls -1 www/stations/*.tsv |
     tail -2 |
     xargs cat |
-    tail -15000 |
+    tail -25000 |
     sort -n |
     uniq > www/stations.tsv
 
