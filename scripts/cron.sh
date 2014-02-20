@@ -1,7 +1,7 @@
 #!/bin/bash
 exec >> /var/log/flooddata 2>&1
 
-. ~/flooddata.env
+. ~/etc/flooddata.env
 
 echo ::::::::::::::::
 date
