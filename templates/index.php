@@ -45,7 +45,7 @@
 <div id="footer">
 <p>This data is published under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>
     and will be available from <a href="http://flooddata.alphagov.co.uk">flooddaata.alphagov.co.uk</a> until May 2014.</p>
-<p>An archive of the data along with the code used to generate this page is available from <a href="">github.com/alphagov/flooddata</a>.
+<p>An archive of the data along with the code used to generate this page is available from <a href="https://github.com/alphagov/flooddata">github.com/alphagov/flooddata</a>.
 </div>
 </p>
 </body>
