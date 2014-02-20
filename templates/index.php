@@ -13,13 +13,19 @@
 
 <?php
     function list_files($dir) {
+	$files = array();
         if ($handle = opendir($dir)) {
-            while (false !== ($entry = readdir($handle))) {
-                if (!preg_match("/^\./", $entry)) {
-                    echo "    <li><a href=\"$dir/$entry\">$entry</a></li>\n";
+            while (false !== ($file = readdir($handle))) {
+                if (!preg_match("/^\./", $file)) {
+			$files[] = $file;
                 }
             }
             closedir($handle);
+ 	    natsort($files);
+	    $files = array_reverse($files, true);
+	    foreach($files as $file) {
+                    echo "    <li><a href=\"$dir/$file\">$file</a></li>\n";
+	    }
        }
     }
 ?>
