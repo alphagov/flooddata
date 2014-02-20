@@ -2,6 +2,7 @@ cache
 files
 tmp
 etc
+www
 
 .bash_history
 .bash_logout
