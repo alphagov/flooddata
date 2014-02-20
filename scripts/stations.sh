@@ -25,7 +25,25 @@ find files/ENT_7001 -name \*.xml |
                 set -x
                 xsltproc templates/stations.xsl $xml
             ) |
-            grep -v 'Gate Position' > $tsv
+
+	    #
+	    # remove gates
+            #
+            grep -v 'Gate Position' |
+
+	    #
+	    # fixup groundwater locations
+	    #
+	    awk -F$'\t' '
+		BEGIN { OFS=FS }
+		{
+		    if ($7 ~ /Groundwater/) {
+			$4 = gensub(/^(..)([0-9][0-9])...([0-9][0-9])...$/, "\\1\\2\\3", "", $4);
+			$4 = gensub(/^(..)([0-9][0-9])..([0-9][0-9])..$/,"\\1\\2\\3", "", $4);
+			$4 = gensub(/^(..)([0-9][0-9]).([0-9][0-9]).$/,"\\1\\2\\3", "", $4);
+		    }
+		    print;
+		}' > $tsv
 
             #
             #  capture header
@@ -36,7 +54,7 @@ find files/ENT_7001 -name \*.xml |
             #  add to daily file
             #
             cat $tsv |
-            awk -F'	' '
+            awk -F$'\t' '
                $1 ~ /^20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/ {
                     day=$1;
                     sub(/T.*$/,"",day);
