@@ -28,7 +28,7 @@
   <h2>River levels</h2>
   <p>Hydrometric data gathered from stations around the UK, updated several times an hour:<p>
   <ul>
-    <li><a href="stations.tsv.gz">stations.tsv.gz</a> — latest</li>
+    <li><a href="stations.tsv">stations.tsv</a> — latest</li>
 <?php list_files('stations') ?>
   </ul>
 </div>

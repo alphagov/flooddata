@@ -65,17 +65,17 @@ find files/ENT_7001 -name \*.xml |
     done
 
 #
-#  generate latest file
+#  generate short feed of latest results
 #
-ls -1 www/stations/*.tsv |
+ls -tr www/stations |
     tail -2 |
     xargs cat |
-    tail -2000 |
+    tail -15000 |
     sort -n |
     uniq > www/stations.tsv
 
 #
-#  zip latest stations.tsv
-#  - for backwards compatibility with big file made for the hackday
+#  gzip latest stations.tsv
+#  - for backwards compatibility with the big file made for the #floodhack hackday
 #
 gzip -c < www/stations.tsv > www/stations.tsv.gz
