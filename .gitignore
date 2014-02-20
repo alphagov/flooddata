@@ -3,6 +3,7 @@ cache
 files
 tmp
 www
+etc
 
 .bash_history
 .bash_logout
