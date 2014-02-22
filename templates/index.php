@@ -101,7 +101,7 @@ p{
   font-weight:400;
   text-transform:none;
   font-weight:bold;
-  margin:0
+  margin:16px 0
 }
 #footer .footer-meta .footer-meta-inner ul{
   font-size:16px;
@@ -112,10 +112,6 @@ p{
   list-style:none;
   margin:0 0 1em;
   padding:0
-}
-#footer .footer-meta .footer-meta-inner ul li{
-  display:inline-block;
-  margin:0 15px 0 0;
 }
 #footer .footer-meta .footer-meta-inner .open-government-licence{
   clear:left;
@@ -157,6 +153,9 @@ p{
   #footer{
     clear:both;
   }
+  #footer h2{
+    margin:0;
+  }
   #footer .footer-meta .footer-meta-inner{
     width: 75%;
   }
@@ -171,6 +170,10 @@ p{
     top:0;
     width:41px;
     height:100%
+  }
+  #footer .footer-meta .footer-meta-inner ul li{
+    display:inline-block;
+    margin:0 15px 0 0;
   }
 }
   </style>
@@ -238,7 +241,7 @@ p{
     <div class="footer-meta">
       <div class="footer-meta-inner">
         <ul>
-          <li><a title="View and suggest changes to the page source on GitHub" href="https://github.com/alphagov/flooddata">Page source</a></li>
+          <li><a title="View and suggest changes to the source code on GitHub" href="https://github.com/alphagov/flooddata">Source code</a></li>
           <li>Built by the <a href="https://gds.blog.gov.uk/">Government Digital Service</a></li>
         </ul>
         <div class="open-government-licence">
