@@ -89,7 +89,7 @@ ls -1 www/stations/*.tsv |
     tail -2 | (
 	cat $header
         xargs cat |
-	tail -25000
+	tail -10000
     ) |
     sort -n |
     uniq > www/stations.tsv
