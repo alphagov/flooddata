@@ -211,7 +211,7 @@ p{
 
   <p>A set of data feeds to accompany the <a href="https://www.gov.uk/government/publications/uk-floods-2014-data">UK floods 2014 data</a> published by the <a href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a> on <a href="https://www.gov.uk">GOV.UK</a>.</p>
 
-  <p>This page and data will be available from <a href="http://flooddata.alphagov.co.uk">flooddaata.alphagov.co.uk</a> until May 2014.</p>
+  <p>This page and data will be available from <a href="http://flooddata.alphagov.co.uk">flooddata.alphagov.co.uk</a> until May 2014.</p>
 
 
   <div id="river-levels">
